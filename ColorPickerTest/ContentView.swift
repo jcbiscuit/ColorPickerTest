@@ -23,6 +23,14 @@ struct ContentView: View {
         
             }
            
+            Rectangle()
+                .foregroundColor(selectedColor)
+                .frame(width: 250, height: 150)
+                .padding()
+            
+            Form {
+                ColorPicker("Change the rectangle color", selection: $selectedColor)
+            }
                
         }
        
