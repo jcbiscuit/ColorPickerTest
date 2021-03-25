@@ -9,27 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var selectedColor: Color = .red
+    @State private var circleSelectedColor: Color = .red
+    @State private var rectangelSelectedColor: Color = .red
     
     var body: some View {
         VStack{
             Circle()
-                .foregroundColor(selectedColor)
+                .foregroundColor(circleSelectedColor)
                 .frame(width: 200, height: 200)
                 .padding()
             
             Form {
-                ColorPicker("Select a new color", selection: $selectedColor)
+                ColorPicker("Select a new color", selection: $circleSelectedColor)
         
             }
            
             Rectangle()
-                .foregroundColor(selectedColor)
+                .foregroundColor(rectangelSelectedColor)
                 .frame(width: 250, height: 150)
                 .padding()
             
             Form {
-                ColorPicker("Change the rectangle color", selection: $selectedColor)
+                ColorPicker("Change the rectangle color", selection: $rectangelSelectedColor)
             }
                
         }
